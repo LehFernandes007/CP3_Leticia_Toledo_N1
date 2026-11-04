@@ -11,6 +11,7 @@ aplicarTema(localStorage.getItem('tema') || 'claro');
 botaoTema.addEventListener('click', function () {
     const tema = document.body.classList.contains('tema-escuro') ? 'claro' : 'escuro';
     localStorage.setItem('tema', tema);
+    console.log('Tema escolhido: ' + tema);
     aplicarTema(tema);
 });
 
