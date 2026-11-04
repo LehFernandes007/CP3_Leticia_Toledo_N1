@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário de cadastro</title>
+
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+
+    <body>
+
+        <header>
+
+            <h1>Formulário de cadastro</h1>
+
+            <p>
+                Preencha os dados abaixo para entrar em contato.
+            </p>
+
+            <div class="menu-navegacao">
+                <input class="menu-toggle" type="checkbox" id="menu-toggle"
+                    aria-label="Abrir ou fechar menu de navegação">
+                <label class="menu-botao" for="menu-toggle">
+                    <span aria-hidden="true"></span>
+                </label>
+
+                <nav aria-label="Navegação principal">
+
+                    <ul>
+                        <li>
+                            <a href="index.html">Início</a>
+                        </li>
+
+                        <li>
+                            <a href="curriculo.html">Currículo</a>
+                        </li>
+
+                        <li>
+                            <a href="formulario.html">Formulário</a>
+                        </li>
+
+                        <li>
+                            <a href="multimidia.html">Multimídia</a>
+                        </li>
+
+                        <li>
+                            <a href="graficos.html">Gráficos</a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+
+            <button type="button" id="botao-tema" class="botao-tema" aria-pressed="false">Tema escuro</button>
+        </header>
+
+
+        <main>
+
+            <section>
+
+                <h2>Dados para contato</h2>
+
+                <form id="formulario-contato" action="#" method="post">
+
+                    <fieldset>
+
+                        <legend>Informações pessoais</legend>
+
+                        <p>
+                            <label for="nome">Nome completo:</label>
+
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo"
+                                autocomplete="name" required>
+                        </p>
+
+
+                        <p>
+                            <label for="email">E-mail:</label>
+
+                            <input type="email" id="email" name="email" placeholder="exemplo@email.com"
+                                autocomplete="email" required>
+                        </p>
+
+
+                        <p>
+                            <label for="telefone">Telefone:</label>
+
+                            <input type="tel" id="telefone" name="telefone" pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}"
+                                placeholder="(11) 91234-5678" title="Use o formato (11) 91234-5678" autocomplete="tel"
+                                required>
+                        </p>
+
+
+                        <p>
+                            <label for="nascimento">Data de nascimento:</label>
+
+                            <input type="date" id="nascimento" name="nascimento" required>
+                        </p>
+
+
+                        <p>
+                            <label for="idade">Idade:</label>
+
+                            <input type="number" id="idade" name="idade" min="1" max="120"
+                                placeholder="Digite sua idade" required>
+                        </p>
+
+
+                        <p>
+                            <label for="senha">Senha:</label>
+
+                            <input type="password" id="senha" name="senha" minlength="6" placeholder="Digite uma senha"
+                                required>
+                        </p>
+
+                    </fieldset>
+
+
+                    <fieldset>
+
+                        <legend>Mensagem</legend>
+
+                        <p>
+                            <label for="assunto">Assunto:</label>
+
+                            <select id="assunto" name="assunto" required>
+
+                                <option value="">
+                                    Selecione uma opção
+                                </option>
+
+                                <option value="duvida">
+                                    Dúvida
+                                </option>
+
+                                <option value="projeto">
+                                    Projeto
+                                </option>
+
+                                <option value="contato">
+                                    Contato profissional
+                                </option>
+
+                            </select>
+                        </p>
+
+
+                        <p>
+                            <label for="mensagem">Mensagem:</label>
+                        </p>
+
+                        <p>
+                            <textarea id="mensagem" name="mensagem" rows="5" cols="40" placeholder="Digite sua mensagem"
+                                required></textarea>
+                        </p>
+
+                    </fieldset>
+
+
+                    <p class="form-acoes">
+                        <button type="submit">Cadastrar</button>
+
+                        <button type="reset">Limpar</button>
+                    </p>
+
+                <p id="resposta-formulario" class="mensagem-formulario" role="status" aria-live="polite"></p>
+                </form>
+
+            </section>
+
+        </main>
+
+
+        <footer>
+
+            <p>
+                Portfólio pessoal - Letícia Toledo
+            </p>
+
+        </footer>
+
+        <script src="js/scripts.js" defer></script>
+    </body>
+
+</html>
